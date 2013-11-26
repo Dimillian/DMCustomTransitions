@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FB79BCB1845000100333376 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB79BCA1845000100333376 /* Foundation.framework */; };
+		9FB79BCD1845000100333376 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB79BCC1845000100333376 /* CoreGraphics.framework */; };
+		9FB79BCF1845000100333376 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB79BCE1845000100333376 /* UIKit.framework */; };
+		9FB79BD51845000100333376 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FB79BD31845000100333376 /* InfoPlist.strings */; };
+		9FB79BD71845000100333376 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB79BD61845000100333376 /* main.m */; };
+		9FB79BDB1845000100333376 /* DMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB79BDA1845000100333376 /* DMAppDelegate.m */; };
+		9FB79BDD1845000100333376 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FB79BDC1845000100333376 /* Images.xcassets */; };
+		9FB79BE41845000200333376 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB79BE31845000200333376 /* XCTest.framework */; };
+		9FB79BE51845000200333376 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB79BCA1845000100333376 /* Foundation.framework */; };
+		9FB79BE61845000200333376 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB79BCE1845000100333376 /* UIKit.framework */; };
+		9FB79BEE1845000200333376 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FB79BEC1845000200333376 /* InfoPlist.strings */; };
+		9FB79BF01845000200333376 /* DMCustomTransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB79BEF1845000200333376 /* DMCustomTransitionTests.m */; };
+		9FB79BFB1845003600333376 /* DMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB79BFA1845003600333376 /* DMViewController.m */; };
+		9FB79BFF1845005700333376 /* DMBaseTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB79BFE1845005700333376 /* DMBaseTransition.m */; };
+		9FB79C021845006900333376 /* DMAlphaTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB79C011845006900333376 /* DMAlphaTransition.m */; };
+		9FB79C051845007700333376 /* DMScaleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB79C041845007700333376 /* DMScaleTransition.m */; };
+		9FB79C08184501E600333376 /* DMSlideTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB79C07184501E600333376 /* DMSlideTransition.m */; };
+		9FB79C0B1845023800333376 /* DMPresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB79C0A1845023800333376 /* DMPresentedViewController.m */; };
+		9FB79C0D1845024900333376 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB79C0C1845024900333376 /* Storyboard.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FB79BE71845000200333376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FB79BBF1845000100333376 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FB79BC61845000100333376;
+			remoteInfo = DMCustomTransition;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9FB79BC71845000100333376 /* DMCustomTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMCustomTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FB79BCA1845000100333376 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9FB79BCC1845000100333376 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9FB79BCE1845000100333376 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9FB79BD21845000100333376 /* DMCustomTransition-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DMCustomTransition-Info.plist"; sourceTree = "<group>"; };
+		9FB79BD41845000100333376 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9FB79BD61845000100333376 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9FB79BD81845000100333376 /* DMCustomTransition-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DMCustomTransition-Prefix.pch"; sourceTree = "<group>"; };
+		9FB79BD91845000100333376 /* DMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMAppDelegate.h; sourceTree = "<group>"; };
+		9FB79BDA1845000100333376 /* DMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMAppDelegate.m; sourceTree = "<group>"; };
+		9FB79BDC1845000100333376 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9FB79BE21845000200333376 /* DMCustomTransitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DMCustomTransitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FB79BE31845000200333376 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9FB79BEB1845000200333376 /* DMCustomTransitionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DMCustomTransitionTests-Info.plist"; sourceTree = "<group>"; };
+		9FB79BED1845000200333376 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9FB79BEF1845000200333376 /* DMCustomTransitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMCustomTransitionTests.m; sourceTree = "<group>"; };
+		9FB79BF91845003600333376 /* DMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMViewController.h; sourceTree = "<group>"; };
+		9FB79BFA1845003600333376 /* DMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMViewController.m; sourceTree = "<group>"; };
+		9FB79BFD1845005700333376 /* DMBaseTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMBaseTransition.h; path = Transitions/DMBaseTransition.h; sourceTree = SOURCE_ROOT; };
+		9FB79BFE1845005700333376 /* DMBaseTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMBaseTransition.m; path = Transitions/DMBaseTransition.m; sourceTree = SOURCE_ROOT; };
+		9FB79C001845006900333376 /* DMAlphaTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMAlphaTransition.h; path = Transitions/DMAlphaTransition.h; sourceTree = SOURCE_ROOT; };
+		9FB79C011845006900333376 /* DMAlphaTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMAlphaTransition.m; path = Transitions/DMAlphaTransition.m; sourceTree = SOURCE_ROOT; };
+		9FB79C031845007700333376 /* DMScaleTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMScaleTransition.h; path = Transitions/DMScaleTransition.h; sourceTree = SOURCE_ROOT; };
+		9FB79C041845007700333376 /* DMScaleTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMScaleTransition.m; path = Transitions/DMScaleTransition.m; sourceTree = SOURCE_ROOT; };
+		9FB79C06184501E600333376 /* DMSlideTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMSlideTransition.h; path = Transitions/DMSlideTransition.h; sourceTree = SOURCE_ROOT; };
+		9FB79C07184501E600333376 /* DMSlideTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMSlideTransition.m; path = Transitions/DMSlideTransition.m; sourceTree = SOURCE_ROOT; };
+		9FB79C091845023800333376 /* DMPresentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPresentedViewController.h; sourceTree = "<group>"; };
+		9FB79C0A1845023800333376 /* DMPresentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPresentedViewController.m; sourceTree = "<group>"; };
+		9FB79C0C1845024900333376 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FB79BC41845000100333376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FB79BCD1845000100333376 /* CoreGraphics.framework in Frameworks */,
+				9FB79BCF1845000100333376 /* UIKit.framework in Frameworks */,
+				9FB79BCB1845000100333376 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FB79BDF1845000200333376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FB79BE41845000200333376 /* XCTest.framework in Frameworks */,
+				9FB79BE61845000200333376 /* UIKit.framework in Frameworks */,
+				9FB79BE51845000200333376 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FB79BBE1845000100333376 = {
+			isa = PBXGroup;
+			children = (
+				9FB79BD01845000100333376 /* DMCustomTransition */,
+				9FB79BE91845000200333376 /* DMCustomTransitionTests */,
+				9FB79BC91845000100333376 /* Frameworks */,
+				9FB79BC81845000100333376 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FB79BC81845000100333376 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FB79BC71845000100333376 /* DMCustomTransition.app */,
+				9FB79BE21845000200333376 /* DMCustomTransitionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FB79BC91845000100333376 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FB79BCA1845000100333376 /* Foundation.framework */,
+				9FB79BCC1845000100333376 /* CoreGraphics.framework */,
+				9FB79BCE1845000100333376 /* UIKit.framework */,
+				9FB79BE31845000200333376 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FB79BD01845000100333376 /* DMCustomTransition */ = {
+			isa = PBXGroup;
+			children = (
+				9FB79BFC1845003B00333376 /* Transition */,
+				9FB79BD91845000100333376 /* DMAppDelegate.h */,
+				9FB79BDA1845000100333376 /* DMAppDelegate.m */,
+				9FB79BF91845003600333376 /* DMViewController.h */,
+				9FB79BFA1845003600333376 /* DMViewController.m */,
+				9FB79C091845023800333376 /* DMPresentedViewController.h */,
+				9FB79C0A1845023800333376 /* DMPresentedViewController.m */,
+				9FB79C0C1845024900333376 /* Storyboard.storyboard */,
+				9FB79BDC1845000100333376 /* Images.xcassets */,
+				9FB79BD11845000100333376 /* Supporting Files */,
+			);
+			path = DMCustomTransition;
+			sourceTree = "<group>";
+		};
+		9FB79BD11845000100333376 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FB79BD21845000100333376 /* DMCustomTransition-Info.plist */,
+				9FB79BD31845000100333376 /* InfoPlist.strings */,
+				9FB79BD61845000100333376 /* main.m */,
+				9FB79BD81845000100333376 /* DMCustomTransition-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FB79BE91845000200333376 /* DMCustomTransitionTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FB79BEF1845000200333376 /* DMCustomTransitionTests.m */,
+				9FB79BEA1845000200333376 /* Supporting Files */,
+			);
+			path = DMCustomTransitionTests;
+			sourceTree = "<group>";
+		};
+		9FB79BEA1845000200333376 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FB79BEB1845000200333376 /* DMCustomTransitionTests-Info.plist */,
+				9FB79BEC1845000200333376 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FB79BFC1845003B00333376 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				9FB79BFD1845005700333376 /* DMBaseTransition.h */,
+				9FB79BFE1845005700333376 /* DMBaseTransition.m */,
+				9FB79C001845006900333376 /* DMAlphaTransition.h */,
+				9FB79C011845006900333376 /* DMAlphaTransition.m */,
+				9FB79C031845007700333376 /* DMScaleTransition.h */,
+				9FB79C041845007700333376 /* DMScaleTransition.m */,
+				9FB79C06184501E600333376 /* DMSlideTransition.h */,
+				9FB79C07184501E600333376 /* DMSlideTransition.m */,
+			);
+			name = Transition;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FB79BC61845000100333376 /* DMCustomTransition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FB79BF31845000200333376 /* Build configuration list for PBXNativeTarget "DMCustomTransition" */;
+			buildPhases = (
+				9FB79BC31845000100333376 /* Sources */,
+				9FB79BC41845000100333376 /* Frameworks */,
+				9FB79BC51845000100333376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DMCustomTransition;
+			productName = DMCustomTransition;
+			productReference = 9FB79BC71845000100333376 /* DMCustomTransition.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9FB79BE11845000200333376 /* DMCustomTransitionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FB79BF61845000200333376 /* Build configuration list for PBXNativeTarget "DMCustomTransitionTests" */;
+			buildPhases = (
+				9FB79BDE1845000200333376 /* Sources */,
+				9FB79BDF1845000200333376 /* Frameworks */,
+				9FB79BE01845000200333376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FB79BE81845000200333376 /* PBXTargetDependency */,
+			);
+			name = DMCustomTransitionTests;
+			productName = DMCustomTransitionTests;
+			productReference = 9FB79BE21845000200333376 /* DMCustomTransitionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FB79BBF1845000100333376 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Thomas Ricouard";
+				TargetAttributes = {
+					9FB79BE11845000200333376 = {
+						TestTargetID = 9FB79BC61845000100333376;
+					};
+				};
+			};
+			buildConfigurationList = 9FB79BC21845000100333376 /* Build configuration list for PBXProject "DMCustomTransition" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9FB79BBE1845000100333376;
+			productRefGroup = 9FB79BC81845000100333376 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FB79BC61845000100333376 /* DMCustomTransition */,
+				9FB79BE11845000200333376 /* DMCustomTransitionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FB79BC51845000100333376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FB79BD51845000100333376 /* InfoPlist.strings in Resources */,
+				9FB79BDD1845000100333376 /* Images.xcassets in Resources */,
+				9FB79C0D1845024900333376 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FB79BE01845000200333376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FB79BEE1845000200333376 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FB79BC31845000100333376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FB79C0B1845023800333376 /* DMPresentedViewController.m in Sources */,
+				9FB79C051845007700333376 /* DMScaleTransition.m in Sources */,
+				9FB79C08184501E600333376 /* DMSlideTransition.m in Sources */,
+				9FB79BFF1845005700333376 /* DMBaseTransition.m in Sources */,
+				9FB79BD71845000100333376 /* main.m in Sources */,
+				9FB79BFB1845003600333376 /* DMViewController.m in Sources */,
+				9FB79C021845006900333376 /* DMAlphaTransition.m in Sources */,
+				9FB79BDB1845000100333376 /* DMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FB79BDE1845000200333376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FB79BF01845000200333376 /* DMCustomTransitionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FB79BE81845000200333376 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FB79BC61845000100333376 /* DMCustomTransition */;
+			targetProxy = 9FB79BE71845000200333376 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9FB79BD31845000100333376 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FB79BD41845000100333376 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9FB79BEC1845000200333376 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FB79BED1845000200333376 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FB79BF11845000200333376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9FB79BF21845000200333376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FB79BF41845000200333376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DMCustomTransition/DMCustomTransition-Prefix.pch";
+				INFOPLIST_FILE = "DMCustomTransition/DMCustomTransition-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9FB79BF51845000200333376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DMCustomTransition/DMCustomTransition-Prefix.pch";
+				INFOPLIST_FILE = "DMCustomTransition/DMCustomTransition-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9FB79BF71845000200333376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DMCustomTransition.app/DMCustomTransition";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DMCustomTransition/DMCustomTransition-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DMCustomTransitionTests/DMCustomTransitionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9FB79BF81845000200333376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DMCustomTransition.app/DMCustomTransition";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DMCustomTransition/DMCustomTransition-Prefix.pch";
+				INFOPLIST_FILE = "DMCustomTransitionTests/DMCustomTransitionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FB79BC21845000100333376 /* Build configuration list for PBXProject "DMCustomTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FB79BF11845000200333376 /* Debug */,
+				9FB79BF21845000200333376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FB79BF31845000200333376 /* Build configuration list for PBXNativeTarget "DMCustomTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FB79BF41845000200333376 /* Debug */,
+				9FB79BF51845000200333376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FB79BF61845000200333376 /* Build configuration list for PBXNativeTarget "DMCustomTransitionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FB79BF71845000200333376 /* Debug */,
+				9FB79BF81845000200333376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FB79BBF1845000100333376 /* Project object */;
+}
