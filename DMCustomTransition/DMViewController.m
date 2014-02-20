@@ -14,6 +14,10 @@
 
 @interface DMViewController ()
 
+@property (nonatomic, strong) DMAlphaTransition *alphaTransition;
+@property (nonatomic, strong) DMScaleTransition *scaleTransition;
+@property (nonatomic, strong) DMSlideTransition *slideTransition;
+
 @end
 
 @implementation DMViewController
@@ -38,19 +42,19 @@
 }
 
 - (IBAction)onScaleTransitionButton:(id)sender {
-    DMScaleTransition *scaleTransition = [[DMScaleTransition alloc]init];
-    [self presentWithTransition:scaleTransition];
+    self.scaleTransition = [[DMScaleTransition alloc]init];
+    [self presentWithTransition:self.scaleTransition];
 }
 
 - (IBAction)onAlphaTransitionButton:(id)sender {
-    DMAlphaTransition *alphaTransition = [[DMAlphaTransition alloc]init];
-    [self presentWithTransition:alphaTransition];
+    self.alphaTransition = [[DMAlphaTransition alloc]init];
+    [self presentWithTransition:self.alphaTransition];
 }
 
 - (IBAction)onSlideTransitionButton:(id)sender {
-    DMSlideTransition *slideTransition = [[DMSlideTransition alloc]init];
-    [slideTransition setBackgroundColor:[UIColor whiteColor]];
-    [self presentWithTransition:slideTransition];
+    self.slideTransition = [[DMSlideTransition alloc]init];
+    [self.slideTransition setBackgroundColor:[UIColor whiteColor]];
+    [self presentWithTransition:self.slideTransition];
 }
 
 - (void)presentWithTransition:(id)transition
