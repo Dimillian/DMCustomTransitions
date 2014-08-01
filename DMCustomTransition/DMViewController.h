@@ -14,4 +14,6 @@
 - (IBAction)onAlphaTransitionButton:(id)sender;
 - (IBAction)onSlideTransitionButton:(id)sender;
 
+- (IBAction)onOtherTransitionButton:(id)sender;
+
 @end

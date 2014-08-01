@@ -9,7 +9,7 @@
 #import "QHOtherTransition.h"
 #import <QuartzCore/QuartzCore.h>
 
-#define kDuration 0.7   // 动画持续时间(秒)
+#define kDuration 0.7   // thn animation's duration after view transition (动画持续时间(秒))
 
 @interface QHOtherTransition ()
 {
@@ -25,7 +25,7 @@
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    return 0.30f;
+    return 0.01f;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
@@ -37,26 +37,30 @@
     
     if (self.isPresenting)
     {
-        [containerView insertSubview:toVC.view belowSubview:fromVC.view];
+        typeID = arc4random() % 4 + 1;//random 1 to 4, means top, left, bottom and right 
+        if(_animationType == 1)
+            [containerView insertSubview:toVC.view belowSubview:fromVC.view];
+        else
+            [containerView insertSubview:toVC.view aboveSubview:fromVC.view];
+        
         [self startAnimationTransition:containerView from:fromVC to:toVC];
     }
     else
     {
-//        [containerView addSubview:toVC.view];
-//        [containerView addSubview:fromVC.view];
-        [containerView insertSubview:toVC.view belowSubview:fromVC.view];
+        if(_animationType == 1)
+            [containerView insertSubview:toVC.view belowSubview:fromVC.view];
+        else
+            [containerView insertSubview:toVC.view aboveSubview:fromVC.view];
+        
         [self startAnimationTransition:containerView from:fromVC to:toVC];
     }
 }
 
-static int typeID = 0;
+static int typeID = 1;
 
 - (void)startAnimationTransition:(UIView *)mainV from:(UIViewController *)fromVC to:(UIViewController *)toVC
 {
-    int animationType = 1;
-    int animationStyle = 205;
-    
-    switch (animationType)
+    switch (_animationType)
     {
         case 1:
         {
@@ -65,66 +69,70 @@ static int typeID = 0;
             animation.duration = kDuration;
             animation.timingFunction = UIViewAnimationCurveEaseInOut;
             
-            switch (animationStyle) {
-                case 101:
+            switch (_animationStyle) {
+                case AnimationStyleTag_kCATransitionFade:
                     animation.type = kCATransitionFade;
                     break;
-                case 102:
+                case AnimationStyleTag_kCATransitionPush:
                     animation.type = kCATransitionPush;
                     break;
-                case 103:
+                case AnimationStyleTag_kCATransitionReveal:
                     animation.type = kCATransitionReveal;
                     break;
-                case 104:
+                case AnimationStyleTag_kCATransitionMoveIn:
                     animation.type = kCATransitionMoveIn;
                     break;
-                case 201:
+                case AnimationStyleTag_cube:
                     animation.type = @"cube";
                     break;
-                case 202:
+                case AnimationStyleTag_suckEffect:
                     animation.type = @"suckEffect";
                     break;
-                case 203:
+                case AnimationStyleTag_oglFlip:
                     animation.type = @"oglFlip";
                     break;
-                case 204:
+                case AnimationStyleTag_rippleEffect:
                     animation.type = @"rippleEffect";
                     break;
-                case 205:
+                case AnimationStyleTag_pageCurl:
                     animation.type = @"pageCurl";
+                    _animationStyle = AnimationStyleTag_pageUnCurl;
                     break;
-                case 206:
+                case AnimationStyleTag_pageUnCurl:
                     animation.type = @"pageUnCurl";
+                    _animationStyle = AnimationStyleTag_pageCurl;
                     break;
-                case 207:
+                case AnimationStyleTag_cameraIrisHollowOpen:
                     animation.type = @"cameraIrisHollowOpen";
+                    _animationStyle = AnimationStyleTag_cameraIrisHollowClose;
                     break;
-                case 208:
+                case AnimationStyleTag_cameraIrisHollowClose:
                     animation.type = @"cameraIrisHollowClose";
+                    _animationStyle = AnimationStyleTag_cameraIrisHollowOpen;
                     break;
                 default:
                     break;
             }
             
             switch (typeID) {
-                case 0:
-                    animation.subtype = kCATransitionFromLeft;
-                    break;
                 case 1:
-                    animation.subtype = kCATransitionFromBottom;
+                    animation.subtype = kCATransitionFromLeft;
+                    typeID = 3;
                     break;
                 case 2:
-                    animation.subtype = kCATransitionFromRight;
+                    animation.subtype = kCATransitionFromBottom;
+                    typeID = 4;
                     break;
                 case 3:
+                    animation.subtype = kCATransitionFromRight;
+                    typeID = 1;
+                    break;
+                case 4:
                     animation.subtype = kCATransitionFromTop;
+                    typeID = 2;
                     break;
                 default:
                     break;
-            }
-            typeID += 1;
-            if (typeID > 3) {
-                typeID = 0;
             }
             
             NSUInteger fromV = [[mainV subviews] indexOfObject:fromVC.view];
@@ -140,26 +148,29 @@ static int typeID = 0;
             [UIView beginAnimations:nil context:context];
             [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
             [UIView setAnimationDuration:kDuration];
-            switch (animationStyle)
+            switch (_animationStyle)
             {
-                case 105:
+                case AnimationStyleTag_TransitionCurlDown:
                     [UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:mainV cache:YES];
+                    _animationStyle = AnimationStyleTag_TransitionCurlUp;
                     break;
-                case 106:
+                case AnimationStyleTag_TransitionCurlUp:
                     [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:mainV cache:YES];
+                    _animationStyle = AnimationStyleTag_TransitionCurlDown;
                     break;
-                case 107:
+                case AnimationStyleTag_TransitionFlipFromLeft:
                     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:mainV cache:YES];
+                    _animationStyle = AnimationStyleTag_TransitionFlipFromRight;
                     break;
-                case 108:
+                case AnimationStyleTag_TransitionFlipFromRight:
                     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:mainV cache:YES];
+                    _animationStyle = AnimationStyleTag_TransitionFlipFromLeft;
                     break;
                 default:
                     break;
             }
             
             [UIView setAnimationDelegate:self];
-            // 动画完毕后调用某个方法
             //[UIView setAnimationDidStopSelector:@selector(animationFinished:)];
             [UIView commitAnimations];
             break;

@@ -1,10 +1,11 @@
 #DMCustomTransition
 
--------------------------------华丽丽的分割线---------------------------------
+-------------------------------line(华丽丽的分割线)---------------------------------
 
+1、add other animations after view's transition
 1、添加其他动画效果
 
--------------------------------华丽丽的分割线---------------------------------
+-------------------------------line(华丽丽的分割线)---------------------------------
 
 This is a set of custiom iOS 7 transition. Those transitions are abstracts and should works with any screen size, view controller and configurations.
 
