@@ -30,7 +30,6 @@ typedef NS_ENUM (NSUInteger, AnimationStyleTag)
 
 @interface QHOtherTransition : DMBaseTransition
 
-@property (nonatomic, assign) int animationType;
 @property (nonatomic, assign) int animationStyle;
 
 @end

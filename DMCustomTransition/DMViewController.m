@@ -63,7 +63,6 @@
 {
     UIButton *btn = (UIButton *)sender;
     self.otherTransition = [[QHOtherTransition alloc] init];
-    self.otherTransition.animationType = btn.tag/100;
     self.otherTransition.animationStyle = btn.tag;
     [self presentWithTransition:self.otherTransition];
 }

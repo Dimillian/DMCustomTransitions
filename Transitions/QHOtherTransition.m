@@ -16,6 +16,8 @@
     id<UIViewControllerContextTransitioning> _transitionContext;
 }
 
+@property (nonatomic, assign) int animationType;
+
 @end
 
 @implementation QHOtherTransition
@@ -54,6 +56,12 @@
         
         [self startAnimationTransition:containerView from:fromVC to:toVC];
     }
+}
+
+- (void)setAnimationStyle:(int)animationStyle
+{
+    _animationStyle = animationStyle;
+    _animationType = _animationStyle/100;
 }
 
 static int typeID = 1;
