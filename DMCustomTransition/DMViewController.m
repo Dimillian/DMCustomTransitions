@@ -11,12 +11,14 @@
 #import "DMAlphaTransition.h"
 #import "DMScaleTransition.h"
 #import "DMSlideTransition.h"
+#import "QHOtherTransition.h"
 
 @interface DMViewController ()
 
 @property (nonatomic, strong) DMAlphaTransition *alphaTransition;
 @property (nonatomic, strong) DMScaleTransition *scaleTransition;
 @property (nonatomic, strong) DMSlideTransition *slideTransition;
+@property (nonatomic, strong) QHOtherTransition *otherTransition;
 
 @end
 
@@ -55,6 +57,14 @@
     self.slideTransition = [[DMSlideTransition alloc]init];
     [self.slideTransition setBackgroundColor:[UIColor whiteColor]];
     [self presentWithTransition:self.slideTransition];
+}
+
+- (IBAction)onOtherTransitionButton:(id)sender
+{
+    UIButton *btn = (UIButton *)sender;
+    self.otherTransition = [[QHOtherTransition alloc] init];
+    self.otherTransition.animationStyle = btn.tag;
+    [self presentWithTransition:self.otherTransition];
 }
 
 - (void)presentWithTransition:(id)transition

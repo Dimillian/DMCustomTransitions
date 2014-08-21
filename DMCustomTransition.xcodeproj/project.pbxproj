@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		745F2301198BDD9A00B345A9 /* QHOtherTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 745F2300198BDD9A00B345A9 /* QHOtherTransition.m */; };
 		9FB79BCB1845000100333376 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB79BCA1845000100333376 /* Foundation.framework */; };
 		9FB79BCD1845000100333376 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB79BCC1845000100333376 /* CoreGraphics.framework */; };
 		9FB79BCF1845000100333376 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB79BCE1845000100333376 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		745F22FF198BDD9A00B345A9 /* QHOtherTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QHOtherTransition.h; path = Transitions/QHOtherTransition.h; sourceTree = SOURCE_ROOT; };
+		745F2300198BDD9A00B345A9 /* QHOtherTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QHOtherTransition.m; path = Transitions/QHOtherTransition.m; sourceTree = SOURCE_ROOT; };
 		9FB79BC71845000100333376 /* DMCustomTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMCustomTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB79BCA1845000100333376 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9FB79BCC1845000100333376 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -173,6 +176,8 @@
 		9FB79BFC1845003B00333376 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
+				745F22FF198BDD9A00B345A9 /* QHOtherTransition.h */,
+				745F2300198BDD9A00B345A9 /* QHOtherTransition.m */,
 				9FB79BFD1845005700333376 /* DMBaseTransition.h */,
 				9FB79BFE1845005700333376 /* DMBaseTransition.m */,
 				9FB79C001845006900333376 /* DMAlphaTransition.h */,
@@ -284,6 +289,7 @@
 			files = (
 				9FB79C0B1845023800333376 /* DMPresentedViewController.m in Sources */,
 				9FB79C051845007700333376 /* DMScaleTransition.m in Sources */,
+				745F2301198BDD9A00B345A9 /* QHOtherTransition.m in Sources */,
 				9FB79C08184501E600333376 /* DMSlideTransition.m in Sources */,
 				9FB79BFF1845005700333376 /* DMBaseTransition.m in Sources */,
 				9FB79BD71845000100333376 /* main.m in Sources */,
