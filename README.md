@@ -1,5 +1,7 @@
 #DMCustomTransition
 
+![iamge](https://github.com/chenqihui/DMCustomTransitions/blob/master/screenshots/CustomTransitionsGif.gif)
+
 -------------------------------line(华丽丽的分割线)---------------------------------
 
 1、add other animations after view's transition
